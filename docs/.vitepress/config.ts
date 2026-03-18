@@ -21,13 +21,13 @@ export default defineConfig({
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }]
   ],
   
-  // 构建配置
-  build: {
-    outDir: '.vitepress/dist',
-    assetsDir: 'assets',
-    minify: 'terser',
-    chunkSizeWarningLimit: 1000
-  },
+  // 构建配置 - 移除自定义 outDir，使用默认值
+  // build: {
+  //   outDir: '.vitepress/dist',
+  //   assetsDir: 'assets',
+  //   minify: 'terser',
+  //   chunkSizeWarningLimit: 1000
+  // },
   
   // 主题配置
   themeConfig: {
