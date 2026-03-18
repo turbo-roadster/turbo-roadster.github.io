@@ -7,9 +7,7 @@ export default defineConfig({
   lang: 'zh-CN',
   
   // GitHub Pages 部署配置
-  // 如果部署到 https://<USERNAME>.github.io/<REPO>/，则设置 base 为 '/<REPO>/'
-  // 如果部署到 https://<USERNAME>.github.io/，则设置 base 为 '/'
-  // 请根据你的实际仓库名修改下面的配置
+  // 用户站点 (turbo-roadster.github.io) 使用根路径
   base: '/',
   
   // Head 配置
