@@ -1,0 +1,23 @@
+{
+  "name": "vitepress-learning-site",
+  "version": "1.0.0",
+  "description": "前端学习网站 - 基于 VitePress 构建的前端知识库",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "vitepress",
+    "frontend",
+    "learning",
+    "documentation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "1.0.0-rc.45",
+    "vue": "^3.3.0"
+  }
+}

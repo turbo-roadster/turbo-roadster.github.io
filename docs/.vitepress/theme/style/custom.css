@@ -1,0 +1,255 @@
+/**
+ * 自定义样式
+ * 参考 https://interview.poetries.top/ 的设计风格
+ */
+
+/* ========== 全局变量 ========== */
+:root {
+    /* 品牌色 */
+    --vp-c-brand-1: #3451b2;
+    --vp-c-brand-2: #3a5ccc;
+    --vp-c-brand-3: #5672cd;
+    --vp-c-brand-soft: rgba(52, 81, 178, 0.14);
+
+    /* 渐变色 */
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+    /* 卡片阴影 */
+    --card-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* 暗色主题 */
+.dark {
+    --vp-c-brand-1: #a8b1ff;
+    --vp-c-brand-2: #5c73e7;
+    --vp-c-brand-3: #3451b2;
+    --vp-c-brand-soft: rgba(168, 177, 255, 0.16);
+}
+
+/* ========== 首页样式 ========== */
+
+/* Hero 区域 */
+.VPHero {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.VPHero .name {
+    background: var(--vp-home-hero-name-background);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 64px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+}
+
+.VPHero .text {
+    font-size: 32px !important;
+    font-weight: 600 !important;
+    margin-top: 16px !important;
+}
+
+.VPHero .tagline {
+    font-size: 20px !important;
+    margin-top: 16px !important;
+    opacity: 0.8;
+}
+
+/* 特性卡片 */
+.VPFeatures {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+}
+
+.VPFeature {
+    border: 1px solid var(--vp-c-divider);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    background: var(--vp-c-bg-soft);
+}
+
+.VPFeature:hover {
+    border-color: var(--vp-c-brand-1);
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+}
+
+.VPFeature .icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.VPFeature .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--vp-c-text-1);
+}
+
+.VPFeature .details {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--vp-c-text-2);
+}
+
+/* ========== 内容区域样式 ========== */
+
+/* 代码块 */
+.vp-doc div[class*='language-'] {
+    border-radius: 8px;
+    margin: 16px 0;
+    box-shadow: var(--card-shadow);
+}
+
+.vp-doc div[class*='language-'] code {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* 自定义容器 */
+.vp-doc .custom-block {
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    border-left: 4px solid;
+}
+
+.vp-doc .custom-block.tip {
+    border-color: var(--vp-c-brand-1);
+    background-color: var(--vp-c-brand-soft);
+}
+
+.vp-doc .custom-block.warning {
+    border-color: #e7c000;
+    background-color: rgba(231, 192, 0, 0.1);
+}
+
+.vp-doc .custom-block.danger {
+    border-color: #e0245e;
+    background-color: rgba(224, 36, 94, 0.1);
+}
+
+/* 表格 */
+.vp-doc table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.vp-doc table thead {
+    background-color: var(--vp-c-bg-soft);
+}
+
+.vp-doc table th {
+    font-weight: 600;
+    color: var(--vp-c-text-1);
+}
+
+/* ========== 导航栏样式 ========== */
+
+.VPNav {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dark .VPNav {
+    background-color: rgba(26, 26, 26, 0.9);
+}
+
+/* ========== 侧边栏样式 ========== */
+
+.VPSidebar {
+    padding-top: 24px;
+}
+
+.VPSidebarItem.level-0 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.VPSidebarItem.is-active>.item>.link {
+    color: var(--vp-c-brand-1);
+    font-weight: 600;
+}
+
+/* ========== 响应式设计 ========== */
+
+@media (max-width: 768px) {
+    .VPHero .name {
+        font-size: 48px !important;
+    }
+
+    .VPHero .text {
+        font-size: 24px !important;
+    }
+
+    .VPHero .tagline {
+        font-size: 16px !important;
+    }
+}
+
+/* ========== 滚动条样式 ========== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--vp-c-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--vp-c-divider);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--vp-c-text-3);
+}
+
+/* ========== 动画效果 ========== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.VPFeature {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.VPFeature:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.VPFeature:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.VPFeature:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.VPFeature:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.VPFeature:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.VPFeature:nth-child(6) {
+    animation-delay: 0.6s;
+}
